@@ -1,0 +1,611 @@
+{
+	"info": {
+		"_postman_id": "0b3e2ae3-0ffe-416f-9752-da41f49590ec",
+		"name": "cryptosy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "add_deposit_methods",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wallet_name",
+									"value": "new",
+									"type": "text"
+								},
+								{
+									"key": "icon",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/deposit_methods",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"deposit_methods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_transfer_methods",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wallet_name",
+									"value": "perfect money",
+									"type": "text"
+								},
+								{
+									"key": "wallet_code",
+									"value": "nnnn",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/transfer_methods",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transfer_methods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_min_transfer_value",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "deposit_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "transfer_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/min_transfer_values",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"min_transfer_values"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "send_amount",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "receive_amount",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "from_wallet",
+									"value": "payeer",
+									"type": "text"
+								},
+								{
+									"key": "to_wallet",
+									"value": "cash",
+									"type": "text"
+								},
+								{
+									"key": "admin_wallet",
+									"value": "cash",
+									"type": "text"
+								},
+								{
+									"key": "user_wallet_id",
+									"value": "wiuwhdb",
+									"type": "text"
+								},
+								{
+									"key": "user_op_code",
+									"value": "U98276",
+									"type": "text"
+								},
+								{
+									"key": "user_full_name",
+									"value": "ahmad admd",
+									"type": "text"
+								},
+								{
+									"key": "user_phone",
+									"value": "0981763555",
+									"type": "text"
+								},
+								{
+									"key": "user_place",
+									"value": "adhjdghg",
+									"type": "text"
+								},
+								{
+									"key": "user_email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "commission",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "from_wallet_icon",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "to_wallet_icon",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/add_transaction",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"add_transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transfer_methods",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/transfer_methods",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"transfer_methods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/user_info",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user_info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transactions_list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/transactions_list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions_list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "f_name",
+									"value": "mmm",
+									"type": "text"
+								},
+								{
+									"key": "l_name",
+									"value": "new",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "email1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "oday.krayem.997@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "25",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send_otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "oday.krayem.997@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/request_otp",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"request_otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify_otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "oday.krayem.997@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "525953",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/verify_otp",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"verify_otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "oday.krayem.997@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "0000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/update_pass",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"update_pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin_values",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/admin_values",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin_values"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transfer_methods_values",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/transfer_methods_values",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"transfer_methods_values"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
